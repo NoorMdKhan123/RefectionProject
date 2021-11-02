@@ -36,5 +36,15 @@ namespace ReflectionMSTest
                 ("ReflectionMood.Mood", "MoodAnalyser");
             expected.Equals(obj);
         }
+
+        //5.3
+        public void PassingIncorretcParamterToPassThisTestCase()
+        {
+            object expected = new MoodAnalyser("HAPPY");
+            object obj =
+               MoodAnalyserFactory.CreateMoodAnalyseUsingPrametrizedConstructor("ReflectionMood.MoodAnalyser",
+                "MoodAnalyser", "SAD");
+            expected.Equals(obj);
+        }
     }
 }
