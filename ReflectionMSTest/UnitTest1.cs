@@ -26,5 +26,15 @@ namespace ReflectionMSTest
                 "MoodAnalyser", "HAPPY");
             expected.Equals(obj);
         }
+        //UC 5.2
+        [TestMethod]
+        public void PassingWrongClassName_ToPassTheTestCase()
+        {
+            string message = null;
+            object expected = new MoodAnalyser(message);
+            object obj = MoodAnalyserFactory.CreateMoodAnalyse
+                ("ReflectionMood.Mood", "MoodAnalyser");
+            expected.Equals(obj);
+        }
     }
 }
