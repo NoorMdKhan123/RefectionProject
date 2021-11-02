@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 namespace ReflectionMood
 {
-  public class MoodAnalyserFactory
+    public class MoodAnalyserFactory
     {
         //UC5 for parameterized constructor by passing message paramter to class method
         public static object CreateMoodAnalyseUsingPrametrizedConstructor(string className, string constructorName, string message)
@@ -14,8 +14,8 @@ namespace ReflectionMood
             {
                 if (type.Name.Equals(constructorName))
                 {
-                    ConstructorInfo ctor = type.GetConstructor(new[] { typeof(string)});
-                    object instance = ctor.Invoke(new object[] { "HAPPY"});
+                    ConstructorInfo ctor = type.GetConstructor(new[] { typeof(string) });
+                    object instance = ctor.Invoke(new object[] { "HAPPY" });
                     return instance;
                 }
                 else
@@ -65,7 +65,7 @@ namespace ReflectionMood
                 Type type = Type.GetType("ReflectionMood.MoodAnalyser");
                 object moodAnalyseObject = MoodAnalyserFactory.CreateMoodAnalyseUsingPrametrizedConstructor("ReflectionMood.MoodAnalyser",
                     "MoodAnalyser", message);
-             MethodInfo analyseMethodInfo =   type.GetMethod(methodName);
+                MethodInfo analyseMethodInfo = type.GetMethod(methodName);
                 object mood = analyseMethodInfo.Invoke(moodAnalyseObject, null);
                 return mood.ToString();
             }
@@ -73,6 +73,31 @@ namespace ReflectionMood
             {
                 throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NO_SUCH_METHOD, "Method is not found");
             }
+        }
+        // setting Mood Dynamically with a function
+        public static string SetField(string message, string fieldName)
+        {
+            try
+            {
+                MoodAnalyser moodAnalyse = new MoodAnalyser();
+                Type type = typeof(MoodAnalyser);
+                FieldInfo fieldInfo = type.GetField(fieldName, BindingFlags.Public |
+                   BindingFlags.Instance);
+                if (message == null)
+                {
+                    throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType
+                        .NO_SUCH_FIELD, "message should not be null");
+
+                }
+                fieldInfo.SetValue(moodAnalyse, message);
+                return moodAnalyse.AnalyseMood();
+            }
+            catch (NullReferenceException)
+            {
+                throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NO_SUCH_FIELD,
+                    "Field is not found");
+            }
+
         }
     }
 }
