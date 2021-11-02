@@ -7,8 +7,14 @@ namespace ReflectionMSTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+       //UC 4.1
+        public void MoodAnalyserProblem_ReturnMoodAnalyseObject()
         {
+            string message = null;
+            object expected = new MoodAnalyser(message);
+            object obj = MoodAnalyserFactory.CreateMoodAnalyse
+                ("ReflectionMood.MoodAnalyser", "MoodAnalyser");
+            expected.Equals(obj);
         }
     }
 }
