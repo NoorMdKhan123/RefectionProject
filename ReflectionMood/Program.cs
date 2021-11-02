@@ -6,7 +6,7 @@ namespace ReflectionMood
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Mood Analyser  Reflection");
+            Console.WriteLine("Welcome to Mood   Reflection");
         }
     }
 }
