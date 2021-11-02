@@ -11,3 +11,4 @@ C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netco
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.dll
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.pdb
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.genruntimeconfig.cache
+C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.csproj.AssemblyReference.cache
