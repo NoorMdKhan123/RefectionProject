@@ -54,7 +54,14 @@ namespace ReflectionMSTest
             string mood = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyseMood");
             Assert.AreEqual(expected, mood);
         }
-
+        //6.2 Given Happy Message Using Reflector When Proper Should Return Happy
+        [TestMethod]
+        public void GivenImproperShouldThrowExceptionWithNoSuchField()
+        {
+            string expected = "HAPPY";
+            string mood = MoodAnalyserFactory.InvokeAnalyseMood("Sad", "AnalyseMood");
+            Assert.AreEqual(expected, mood);
+        }
 
 
     }
