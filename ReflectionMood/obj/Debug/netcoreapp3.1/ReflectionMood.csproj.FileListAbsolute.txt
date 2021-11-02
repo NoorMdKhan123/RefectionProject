@@ -4,7 +4,6 @@ C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\bin\Debug\netco
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\bin\Debug\netcoreapp3.1\ReflectionMood.runtimeconfig.dev.json
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\bin\Debug\netcoreapp3.1\ReflectionMood.dll
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\bin\Debug\netcoreapp3.1\ReflectionMood.pdb
-C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.csproj.AssemblyReference.cache
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.AssemblyInfoInputs.cache
 C:\Users\md048\source\repos\ReflectionMoodProject\ReflectionMood\obj\Debug\netcoreapp3.1\ReflectionMood.AssemblyInfo.cs
