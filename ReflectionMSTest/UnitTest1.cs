@@ -46,5 +46,16 @@ namespace ReflectionMSTest
                 "MoodAnalyser", "SAD");
             expected.Equals(obj);
         }
+        //6.1 Given Happy Message Using Reflector When Proper Should Return Happy
+        [TestMethod]
+        public void GivenHappyMoodShouldReturnHappy()
+        {
+            string expected = "HAPPY";
+            string mood = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyseMood");
+            Assert.AreEqual(expected, mood);
+        }
+
+
+
     }
 }
